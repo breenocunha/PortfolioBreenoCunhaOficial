@@ -112,7 +112,7 @@
     }
     
     .btn {
-        width: 93%;
+        width: 100%;
         text-align: center;
     }
     
@@ -153,6 +153,19 @@
     .contact-container {
         grid-template-columns: 1fr;
     }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-container p {
+        font-size: 15px;
+    }
     
     .contact-info {
         order: 2;
@@ -168,5 +181,19 @@
         bottom: 15px;
         width: 40px;
         height: 40px;
+    }
+}
+
+@media (max-width: 370px) {
+    .contact-form input,
+    .contact-form textarea {
+        width: 280px;
+    }
+    .btn {
+        width: 280px;
+        text-align: center;
+    }
+    .contact-container p {
+        font-size: 14px;
     }
 }
