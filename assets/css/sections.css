@@ -1,0 +1,114 @@
+/* Content Styles */
+.content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    padding: 30px;
+}
+
+/* General Section Styles */
+.section {
+    min-height: 100vh;
+    padding: 80px 0;
+    display: block; /* Alterado para exibir todas as seções */
+    margin-bottom: 30px;
+}
+
+.section-content {
+    background-color: var(--light-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-content h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-content h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+/* Content container */
+.content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    padding: 30px;
+    padding-top: 0; /* Ajustado para melhor espaçamento */
+}
+
+/* Home Section */
+#home .section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+}
+
+#home h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+
+#home h2::after {
+    display: none;
+}
+
+#home h3 {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn.primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn.secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}

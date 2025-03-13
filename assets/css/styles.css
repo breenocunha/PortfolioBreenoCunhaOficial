@@ -1,0 +1,22 @@
+/* Main CSS file that imports all other CSS files */
+
+/* Import base styles */
+@import url('base.css');
+
+/* Import layout components */
+@import url('sidebar.css');
+@import url('sections.css');
+
+/* Import section-specific styles */
+@import url('home.css');
+@import url('about.css');
+@import url('skills.css');
+@import url('services.css');
+@import url('portfolio.css');
+@import url('carousel.css'); /* Adicionando o novo arquivo de carrossel */
+@import url('contact.css');
+
+/* Import utilities */
+@import url('responsive.css');
+@import url('dark-mode.css');
+@import url('animations.css');

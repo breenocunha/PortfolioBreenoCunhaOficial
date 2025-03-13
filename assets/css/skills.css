@@ -1,0 +1,105 @@
+/* Skills Icons Styles */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.skill-icon i {
+    font-size: 35px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.skill-name {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon.active i {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+.skill-icon.active .skill-name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for skill icon click */
+@keyframes flipSkill {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.skill-icon.animate {
+    animation: flipSkill 0.8s ease;
+}
+
+/* Specific styles for icons that need special treatment */
+.skill-icon[title="JavaScript"] i {
+    color: #000;
+}
+
+.skill-icon[title="JavaScript"] .skill-name {
+    color: #000;
+}
+
+/* For Flutter icon which might not be in Font Awesome */
+.skill-icon[title="Flutter"] i::before {
+    content: "\f3b8"; /* Using mobile icon as fallback if Flutter icon is not available */
+}
+
+/* For Tailwind which doesn't have a specific icon */
+.skill-icon[title="Tailwind CSS"] i::before {
+    content: "\f13c"; /* Using CSS3 icon for Tailwind */
+}
+
+/* For Next.js which doesn't have a specific icon */
+.skill-icon[title="Next.js"] i::after {
+    content: "N";
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
